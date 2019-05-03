@@ -1,0 +1,246 @@
+.body-container .navbar {
+  background-color: #ffffff;
+  border: 0;
+  margin-bottom: 0; }
+  .body-container .navbar .nav-container {
+    padding: 0 60px; }
+    .body-container .navbar .nav-container .nav-right {
+      padding: 15px 0; }
+      .body-container .navbar .nav-container .nav-right .active-content {
+        color: #ff0000; }
+      .body-container .navbar .nav-container .nav-right li {
+        color: #000000;
+        font-weight: 500;
+        font-size: 13px;
+        padding-left: 5px;
+        padding-right: 5px; }
+      .body-container .navbar .nav-container .nav-right .nav-icon {
+        margin: 0 20px 0 60px; }
+.body-container .banner {
+  position: relative;
+  text-align: center;
+  color: #ffffff; }
+  .body-container .banner .banner-img {
+    background-position: top;
+    background-size: cover;
+    width: 100%; }
+  .body-container .banner .banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .body-container .banner .banner-content .line-seperator {
+      border-top: 1px solid #ffffff; }
+    .body-container .banner .banner-content .banner-motive {
+      font-size: 55px;
+      font-weight: 500;
+      margin-bottom: 30px; }
+    .body-container .banner .banner-content .banner-title {
+      font-weight: 400;
+      font-size: 24px;
+      margin: 20px 0; }
+.body-container .btn {
+  background-color: #E22102;
+  border: 0 solid #ffffff;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 12px;
+  height: 50px;
+  padding: 0 50px; }
+.body-container .section-partition {
+  padding: 120px 30px; }
+  .body-container .section-partition.task-container {
+    background-color: #F7F7F7; }
+  .body-container .section-partition .detail-img-section {
+    padding-bottom: 50px;
+    text-align: right; }
+  .body-container .section-partition .detail-content-section {
+    padding: 100px 50px; }
+    .body-container .section-partition .detail-content-section .section-desc {
+      margin: 30px 0; }
+  .body-container .section-partition .task-head {
+    padding: 0 0 50px;
+    text-align: center; }
+  .body-container .section-partition .project-nav {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 0 30px 30px; }
+    .body-container .section-partition .project-nav .nav-content {
+      display: inline-block;
+      padding-right: 40px; }
+  .body-container .section-partition.footer-container {
+    background-color: #000000; }
+    .body-container .section-partition.footer-container .contact-head {
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 20px; }
+    .body-container .section-partition.footer-container .contact-line {
+      border: 0.5px solid #333333;
+      margin: 20px 0; }
+    .body-container .section-partition.footer-container .contact-content {
+      color: #8E8E8E;
+      float: left; }
+      .body-container .section-partition.footer-container .contact-content .contact-points-container {
+        margin-bottom: 15px; }
+      .body-container .section-partition.footer-container .contact-content .contact-points {
+        display: inline-block;
+        padding-left: 10px;
+        vertical-align: top; }
+      .body-container .section-partition.footer-container .contact-content .arrow {
+        display: inline-block; }
+    .body-container .section-partition.footer-container .contact-timings {
+      color: #8E8E8E;
+      padding-bottom: 45px; }
+      .body-container .section-partition.footer-container .contact-timings .contact-days {
+        float: left; }
+      .body-container .section-partition.footer-container .contact-timings .contact-days-value {
+        float: right; }
+    .body-container .section-partition.footer-container .form-input {
+      display: inline-block;
+      margin-right: 5px; }
+    .body-container .section-partition.footer-container .contact-input {
+      background-color: #353535;
+      border: none;
+      color: #8E8E8E;
+      font-size: 12px;
+      padding: 10px 0;
+      text-align: center; }
+    .body-container .section-partition.footer-container .form-btn {
+      display: inline-block; }
+    .body-container .section-partition.footer-container button {
+      background-color: #ff0000;
+      border: none;
+      color: white;
+      display: inline-block;
+      font-size: 12px;
+      padding: 10px 5px;
+      text-align: center;
+      text-decoration: none; }
+.body-container .description {
+  color: #8E8E8E;
+  font-weight: 400;
+  line-height: 24px; }
+.body-container .section-title {
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 40px;
+  margin: 15px 0; }
+.body-container .line-seperator {
+  border-top: 1px solid #ff0000;
+  width: 15%;
+  margin: 0 auto; }
+.body-container .task-section-container .task-heading {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 10px 0; }
+.body-container .task-section-container .task-head-bg {
+  background-color: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 50px 20px;
+  position: relative;
+  text-align: center; }
+.body-container .task-section-container .task-section-content {
+  margin-bottom: 20px;
+  padding-bottom: 20px; }
+.body-container .task-section-container .news-content {
+  font-weight: 600;
+  font-size: 16px;
+  margin: 10px 0; }
+.body-container .task-section-container .img-spacing {
+  margin-bottom: 30px; }
+.body-container .task-section-container .review-container {
+  background-color: #ffffff;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 20px 35px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px; }
+  .body-container .task-section-container .review-container .review-bg-img {
+    position: absolute;
+    top: -50px;
+    right: 0; }
+  .body-container .task-section-container .review-container .review-content {
+    padding-left: 20px;
+    text-align: left; }
+  .body-container .task-section-container .review-container .review-img {
+    padding-top: 10px; }
+.body-container .service-section {
+  background: url("../img/background/bg1.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 80px 15px 0; }
+  .body-container .service-section .service-section-detail {
+    padding: 50px 110px 0 0; }
+  .body-container .service-section .detail-img-content {
+    text-align: center; }
+.body-container .active-content {
+  color: #ff0000; }
+.body-container .footer-instruct {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center; }
+
+@media (max-width: 992px) {
+  .body-container .banner .banner-content .banner-motive {
+    font-size: 20px; }
+  .body-container .banner .banner-content .banner-title {
+    font-size: 13px; }
+  .body-container .banner .banner-content .line-seperator {
+    display: none; } }
+@media only screen and (max-width: 768px) {
+  .body-container .navbar .nav-container .nav-right .nav-icon {
+    margin: 0 20px 0 0; }
+  .body-container .banner .banner-content .banner-motive {
+    font-size: 14px;
+    margin-bottom: 15px; }
+  .body-container .banner .banner-content .banner-title {
+    font-size: 11px;
+    margin: 15px 0; }
+  .body-container .btn {
+    font-size: 8px;
+    height: 20px;
+    margin-top: 0;
+    padding: 0 20px; }
+  .body-container .task-section-container .task-head-bg {
+    padding: 20px 5px; }
+  .body-container .task-section-container .review-container {
+    padding: 20px 10px; }
+    .body-container .task-section-container .review-container .review-img {
+      display: block;
+      text-align: left;
+      padding-top: 10px; }
+    .body-container .task-section-container .review-container .review-bg-img {
+      display: none; }
+    .body-container .task-section-container .review-container .review-content {
+      padding: 0 40px 0 0; }
+  .body-container .section-partition {
+    padding: 50px 10px; }
+    .body-container .section-partition .detail-content-section {
+      padding: 0; }
+    .body-container .section-partition .task-head {
+      padding: 0 0 20px 0; }
+    .body-container .section-partition .project-nav {
+      padding: 0 0 20px 10px; }
+      .body-container .section-partition .project-nav .nav-content {
+        display: inline-block;
+        font-size: 10px;
+        padding-right: 4px; }
+    .body-container .section-partition.footer-container .footer-spacing {
+      margin-bottom: 50px; }
+    .body-container .section-partition.footer-container .contact-content {
+      float: none; }
+  .body-container .section-title {
+    font-size: 22px; }
+  .body-container .description {
+    font-size: 13px; }
+  .body-container .service-section .service-section-detail {
+    padding: 50px 0; }
+  .body-container button {
+    font-size: 10px;
+    padding: 10px 10px; } }
+
+/*# sourceMappingURL=style.css.map */
