@@ -1,0 +1,103 @@
+@media only screen and (max-width : 1279px ) {
+
+
+    .header-logo {
+        box-sizing: border-box;
+        padding: 32px 0px;
+        background: url(../images/AH-logo.png) center no-repeat;
+        background-size: 200px 50px;
+        text-align: center;
+    }
+
+    .header-number {
+        text-align: center;
+        vertical-align: top;
+    }
+
+    .number-content {
+        color: #727272;
+        font-size: 20px;
+        line-height: 64px;
+    }
+
+    .review-container {
+        color: #939BA3;
+        text-align: center;
+    }
+
+    /* .rw-container-left {
+    } */
+
+
+
+
+    .review-left-inner {
+        display: inline-block;
+    }
+
+    .rw-container-right {
+        margin-bottom: 30px;
+    }
+
+    .review-right-inner {
+        display: inline-block;
+    }
+
+    .task {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .task-head-content {
+        display: inline-block;
+        height: 75px;
+        text-align: center;
+        width: 350px;
+    }
+
+    
+
+    /* .task-left {
+    } */
+
+    .task-left-inner {
+        display: inline-block;
+        width: 60%;
+    }
+
+    /* .task-right {
+    } */
+
+    .task-right-inner {
+        display: inline-block;
+        width: 60%;
+    }
+
+    .form-container {
+        display: inline-block;
+        margin: auto;
+        padding-bottom: 20px;
+    }
+
+    
+
+    /* .form-data { 
+    } */
+
+    .form-label {
+        display: block;
+        text-align: left;
+        font-size: 15px;
+    }
+
+    /* .button {
+        background-color: #5eca37;
+        border-radius: 5px;
+        border: 0px solid #5eca37;
+        color:#ffffff;
+        font-size: 25px;
+        height: 40px;
+        width: 300px;
+    } */
+
+}
