@@ -208,14 +208,12 @@ function getDays(year, month) {
                 for (var b = j + 1; b < bdays[months[month]].length; b++) {
                     if (bdays[months[month]][j].dob.getDate() == bdays[months[month]][b].dob.getDate()) {
                         nameAppend.push(bdays[months[month]][j].name);
-                        console.log(nameAppend);
                         j++;
                     }
                 }   
                 document.querySelectorAll('#date .date-content')[i - 1].setAttribute("style", "color: #ffffff; border-radius: 50%; background-color: #ff0000;");
                 document.querySelectorAll('#date .date-content')[i - 1].setAttribute("dataDate", i);
                 document.querySelectorAll('#date .date-content')[i - 1].setAttribute("dataName", nameAppend + " " + bdays[months[month]][j].name);
-                console.log(nameAppend);
                 document.querySelectorAll('#date .date-content')[i - 1].setAttribute('data-toggle', 'modal');
                 document.querySelectorAll('#date .date-content')[i - 1].setAttribute('data-target', '#my');
                 var x = document.querySelectorAll('#date .date-content')[i - 1];
