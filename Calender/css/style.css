@@ -1,0 +1,61 @@
+body {
+  background-color: #f0f8ff; }
+  body .document-container .calender-container {
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px grey;
+    margin: 100px auto;
+    width: 640px; }
+    body .document-container .calender-container .head-container {
+      background-color: #5f5f5f;
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: 500;
+      padding: 30px 0;
+      text-align: center; }
+      body .document-container .calender-container .head-container .head-data {
+        display: inline-block;
+        width: 150px; }
+      body .document-container .calender-container .head-container .arrow {
+        font-size: 20px; }
+    body .document-container .calender-container .data-container {
+      background-color: #f1f1f1;
+      height: 360px; }
+      body .document-container .calender-container .data-container .calender-content {
+        color: #000000;
+        padding: 20px 0; }
+        body .document-container .calender-container .data-container .calender-content .week-content {
+          display: inline-block;
+          width: 90px; }
+        body .document-container .calender-container .data-container .calender-content .row-data {
+          color: #D3D3D3;
+          margin: 10px 35px;
+          text-align: center; }
+        body .document-container .calender-container .data-container .calender-content .date-content {
+          margin: 10px 35px;
+          text-align: center; }
+  body .document-container .modal-body {
+    padding: 0;
+    text-align: center;
+    height: 350px; }
+    body .document-container .modal-body .modal-desc {
+      display: inline-block;
+      margin: 35px 20px;
+      width: 400px; }
+    body .document-container .modal-body img {
+      position: relative;
+      -webkit-animation: mymove 5s infinite;
+      -webkit-animation-timing-function: linear;
+      animation: mymove 4s infinite;
+      animation-timing-function: linear; }
+@keyframes mymove {
+  0% {
+    bottom: 0px; }
+  50% {
+    bottom: 200px;
+    opacity: 0; }
+  100% {
+    bottom: 0;
+    opacity: 0; } }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calender</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../../css/style.css">
+        <script src="../../javascript/script.js" async></script>
+    </head>
+    <body>
+        <div class="document-container">
+            <div class="calender-container">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-6 head-container">
+                            <span id="leftArrowMonth" class="glyphicon glyphicon-chevron-left arrow"></span>
+                            <div id="month" class="head-data"></div>
+                            <span id="rightArrowMonth" class="glyphicon glyphicon-chevron-right arrow"></span>
+                        </div>
+                        <div class="col-sm-6 head-container">
+                            <span id="leftArrowYear" class="glyphicon glyphicon-chevron-left arrow"></span>
+                            <div id="year" class="head-data"></div>
+                            <span id="rightArrowYear" class="glyphicon glyphicon-chevron-right arrow"></span>
+                        </div>
+                    </div>
+                    <div class="row data-container">
+                        <div>
+                            <div class="calender-content" id="week-data">
+                            </div>
+                            <div id="date" class="calender-content"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" id="my" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 id="modal-head-data" class="modal-title"></h4>
+                        </div>
+                        <div class="modal-body">
+                            <img src="../../img/balloon.jpg" width="40">
+                            <p class="modal-desc"><strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                    Lorem Ipsum has been the industry's standard
+                                    dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                                    to make a type specimen
+                                    book. It has survived not only five centuries, but also the leap into electronic typesetting,
+                                    remaining essentially
+                                    unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem
+                                    Ipsum passages, and more
+                                    recently with desktop publishing software like Aldus PageMaker including versions of Lorem
+                                    Ipsum.Hope your special day brings you all that your heart desires!</strong></p>
+                            <img src="../../img/balloon.jpg" width="40">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
