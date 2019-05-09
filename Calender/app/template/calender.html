@@ -6,30 +6,28 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="../../css/style.css">
-        <script src="../../javascript/script.js" async></script>
+        <script src="../../javascript/script.js"></script>
     </head>
-    <body>
+    <body onload="LoadScript()">
         <div class="document-container">
             <div class="calender-container">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-6 head-container">
-                            <span id="leftArrowMonth" class="glyphicon glyphicon-chevron-left arrow"></span>
+                            <span id="left-arrow-month" class="glyphicon glyphicon-chevron-left arrow"></span>
                             <div id="month" class="head-data"></div>
-                            <span id="rightArrowMonth" class="glyphicon glyphicon-chevron-right arrow"></span>
+                            <span id="right-arrow-month" class="glyphicon glyphicon-chevron-right arrow"></span>
                         </div>
                         <div class="col-sm-6 head-container">
-                            <span id="leftArrowYear" class="glyphicon glyphicon-chevron-left arrow"></span>
+                            <span id="left-arrow-year" class="glyphicon glyphicon-chevron-left arrow"></span>
                             <div id="year" class="head-data"></div>
-                            <span id="rightArrowYear" class="glyphicon glyphicon-chevron-right arrow"></span>
+                            <span id="right-arrow-year" class="glyphicon glyphicon-chevron-right arrow"></span>
                         </div>
                     </div>
                     <div class="row data-container">
-                        <div>
                             <div class="calender-content" id="week-data">
                             </div>
                             <div id="date" class="calender-content"></div>
-                        </div>
                     </div>
                 </div>
             </div>
