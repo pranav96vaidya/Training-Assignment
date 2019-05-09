@@ -210,7 +210,7 @@ function LoadScript() {
                     document.querySelectorAll('#date .date-content')[i - 1].setAttribute("data-date", i);
                     document.querySelectorAll('#date .date-content')[i - 1].setAttribute("data-name", nameAppend + " " + bdays[months[month]][j].name);
                     document.querySelectorAll('#date .date-content')[i - 1].setAttribute('data-toggle', 'modal');
-                    document.querySelectorAll('#date .date-content')[i - 1].setAttribute('data-target', '#my');
+                    document.querySelectorAll('#date .date-content')[i - 1].setAttribute('data-target', '#open-modal');
                     var x = document.querySelectorAll('#date .date-content')[i - 1];
                     x.onclick = function () {
                         document.querySelectorAll('.modal-title')[0].innerHTML = "Happy Birthday " + this.getAttribute('data-name');
