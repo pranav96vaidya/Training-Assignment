@@ -61,7 +61,7 @@ body {
   text-align: center; }
   .hero-button-container .hero-button {
     background-color: #5eca37;
-    color: #ffffff;
+    color: #fff;
     font-size: 23px;
     padding: 10px 85px;
     text-decoration: none; }
@@ -240,7 +240,7 @@ body {
   overflow: auto;
   text-align: center; }
 
-@media only screen and (max-width: 1008px) {
+@media only screen and (max-width: 1200px) {
   .hero {
     background-position: center; }
 
@@ -257,7 +257,7 @@ body {
 
   .info .info-desc {
     width: 70%; } }
-@media only screen and (max-width: 642px) {
+@media only screen and (max-width: 768px) {
   .header-logo {
     padding: 20px 0;
     text-align: center;
@@ -348,15 +348,19 @@ body {
   video {
     width: 50%; }
 
-  .form .form-data .form-input {
-    height: 20px; }
-  .form .form-data .form-textarea {
-    height: 30px; }
-  .form .form-data .last-button {
-    padding: 2px 0;
-    font-size: 14px; }
-  .form .form-data .form-label {
-    font-size: 8px; }
+  .form .form-data {
+    width: 50%; }
+    .form .form-data .form-input {
+      width: 100%;
+      height: 20px; }
+    .form .form-data .form-textarea {
+      width: 100%;
+      height: 30px; }
+    .form .form-data .last-button {
+      padding: 2px 0;
+      font-size: 14px; }
+    .form .form-data .form-label {
+      font-size: 8px; }
 
   .footer {
     font-size: 10px; }
@@ -382,11 +386,5 @@ body {
   .review-title,
   .video-title {
     font-size: 18px; } }
-@media only screen and (max-width: 500px) {
-  .form .form-data {
-    width: 50%; }
-    .form .form-data .form-input,
-    .form .form-data .form-textarea {
-      width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */

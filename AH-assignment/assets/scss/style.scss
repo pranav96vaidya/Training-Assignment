@@ -1,7 +1,7 @@
 @import "color";
 
 %before {
-    background-color: $color3;
+    background-color: $heroBgcolor;
     background-size: cover;
     bottom: 0;
     content: "";
@@ -18,7 +18,7 @@ body {
 }
 
 .top {
-    background-image: linear-gradient(to right, $color12 , $color13, $color14);
+    background-image: linear-gradient(to right, $gradientStartColor , $gradientMiddleColor, $gradientEndColor);
     height:40px;
 }
 
@@ -37,7 +37,7 @@ body {
     vertical-align: top;
     width: 49%;
         .number-content {
-            color: $color2;
+            color: $headerNumColor;
             font-size: 20px;
             padding: 20px 0;
         }
@@ -46,7 +46,7 @@ body {
 .hero {
     background-size: cover;
     background-image: url(../images/AH-hero-image.png);
-    color: $color1;
+    color: $whiteColor;
     position: relative;
     text-align: center;
     z-index: 1;
@@ -82,8 +82,8 @@ body {
     text-align: center;
 
     .hero-button {
-        background-color: $color4;
-        color:#ffffff;
+        background-color: $buttonColor;
+        color: $whiteColor;
         font-size: 23px;
         padding: 10px 85px;
         text-decoration: none;
@@ -98,7 +98,7 @@ body {
 
 .review, 
 .task {
-    color: $color5;
+    color: $commonTextColor;
     padding-bottom: 30px;
     text-align: center;
 
@@ -138,7 +138,7 @@ body {
             }
 
             .task-head {
-                color: $color6;
+                color: $headingColor;
                 font-size: 23px;
                 text-align: center;
             }
@@ -157,15 +157,15 @@ body {
 .info-title, 
 .form-title, 
 .video-title {
-    color: $color7;
+    color: $titleColor;
     font-size: 30px;
     margin: 0;
     text-align: center;
 }
 
 .video-container {
-    background-color: $color8;
-    color: $color1;
+    background-color: $videoContainerColor;
+    color: $whiteColor;
     padding: 30px 0;
     text-align: center;
 
@@ -191,7 +191,7 @@ body {
         width: 700px;
 
         .hyper-link {
-            color: $color9;
+            color: $LinkColor;
         }
 
         .info-list {
@@ -206,12 +206,12 @@ body {
 }
 
 .form {
-    background-color: $color8;
-    color: $color1;
+    background-color: $videoContainerColor;
+    color: $whiteColor;
     padding: 30px 0;
 
     .form-title {
-        color: $color1;
+        color: $whiteColor;
     }
 
     .form-instruct {
@@ -230,7 +230,7 @@ body {
         .form-input, 
         .form-textarea {
             box-sizing:border-box;
-            border: 0px solid $color1;
+            border: 0px solid $whiteColor;
             border-radius: 5px;
             height: 25px;
             margin-bottom: 10px;
@@ -242,9 +242,9 @@ body {
         }
 
         .last-button {
-            background-color: $color4;
-            border: 0px solid $color1;
-            color: $color1;
+            background-color: $buttonColor;
+            border: 0px solid $whiteColor;
+            color: $whiteColor;
             cursor: pointer;
             display: block;
             font-size: 20px;
@@ -256,15 +256,15 @@ body {
 }
 
 .footer {
-    background-color: $color10;
-    color: $color11;
+    background-color: $footerColor;
+    color: $footerContentColor;
     opacity: .9;
     overflow: auto;
     text-align:center;
 }
 
 
-@media only screen and (max-width: 1008px) {
+@media only screen and (max-width: 1200px) {
 
     .hero {
         background-position: center;
@@ -276,6 +276,7 @@ body {
         }
 
         .review-container {
+
             .review-desc {
                 display: inline-block;
                 width: 150px;
@@ -300,7 +301,7 @@ body {
     
 }
 
-@media only screen and (max-width: 642px) {
+@media only screen and (max-width: 768px) {
     .header-logo {
         padding: 20px 0;
         text-align: center;
@@ -366,11 +367,15 @@ body {
 
     .form {
         .form-data {
+            width: 50%;
+
             .form-input {
+                width: 100%;
                 height: 20px;
             }
 
             .form-textarea {
+                width: 100%;
                 height: 30px;
             }
 
@@ -383,8 +388,6 @@ body {
             }
         }
     }
-    
-    
 
     .footer{
         font-size: 10px
@@ -427,20 +430,4 @@ body {
     .video-title {
         font-size: 18px;
     }
-}
-
-@media only screen and (max-width: 500px) {
-    
-    .form {
-        .form-data {
-            width: 50%;
-
-            .form-input, 
-            .form-textarea  {
-                width: 100%;
-            }
-        }
-    }
-    
-    
 }
