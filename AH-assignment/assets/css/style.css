@@ -47,27 +47,30 @@ body {
     .hero .hero-inner .hero-head {
       font-size: 35px;
       margin: 0;
-      padding-top: 15px; }
+      margin: 15px 0; }
     .hero .hero-inner .hero-tag {
-      margin: 20px; }
+      font-size: 30px;
+      font-style: italic;
+      font-weight: 700;
+      margin-bottom: 20px; }
     .hero .hero-inner .hero-icon {
       font-size: 50px; }
     .hero .hero-inner .hero-motive {
       font-size: 20px;
       margin: 15px; }
 
-.hero-button-container {
-  margin: 25px 0;
-  text-align: center; }
-  .hero-button-container .hero-button {
-    background-color: #5eca37;
-    color: #fff;
-    font-size: 23px;
-    padding: 10px 85px;
-    text-decoration: none; }
+.hero-button {
+  background-color: #5eca37;
+  color: #fff;
+  cursor: pointer;
+  font-size: 23px;
+  font-weight: 700;
+  padding: 10px 85px;
+  text-decoration: none; }
 
 .review-head-container {
   font-size: 30px;
+  margin: 20px 0;
   text-align: center; }
 
 .review,
@@ -146,6 +149,7 @@ body {
       .task .task-inner .task-container .task-head {
         color: #F3933D;
         font-size: 23px;
+        margin: 20px 0;
         text-align: center; }
       .review .review-inner .review-container .task-desc,
       .review .review-inner .task-container .task-desc,
@@ -162,12 +166,10 @@ body {
     .task .task-inner .task-container {
       width: 400px; }
 
-.info-title,
-.form-title,
 .video-title {
   color: #323232;
   font-size: 30px;
-  margin: 0;
+  margin-bottom: 20px;
   text-align: center; }
 
 .video-container {
@@ -175,8 +177,6 @@ body {
   color: #fff;
   padding: 30px 0;
   text-align: center; }
-  .video-container .video-title {
-    padding-bottom: 20px; }
 
 .info {
   position: relative;
@@ -223,14 +223,8 @@ body {
     .form .form-data .form-textarea {
       height: 40px; }
     .form .form-data .last-button {
-      background-color: #5eca37;
       border: 0px solid #fff;
-      color: #fff;
-      cursor: pointer;
-      display: block;
-      font-size: 20px;
       padding: 10px 0;
-      text-align: center;
       width: 100%; }
 
 .footer {
@@ -369,20 +363,18 @@ body {
     font-size: 20px; }
   .hero .hero-inner .hero-icon {
     font-size: 40px; }
-  .hero .hero-inner .hero-tag .hero-title {
+  .hero .hero-inner .hero-tag {
     font-size: 13px; }
   .hero .hero-inner .hero-motive {
     font-size: 15px; }
 
-  .hero-button-container .hero-button {
+  .hero-button {
     font-size: 18px;
     padding: 5px 50px; }
 
   .review-head-container {
-    font-size: 25px; }
+    font-size: 20px; }
 
-  .info-title,
-  .form-title,
   .review-title,
   .video-title {
     font-size: 18px; } }

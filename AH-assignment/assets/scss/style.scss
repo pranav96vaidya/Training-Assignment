@@ -61,11 +61,14 @@ body {
         .hero-head {
             font-size: 35px;
             margin: 0;
-            padding-top: 15px;
+            margin: 15px 0;
         }
 
         .hero-tag {
-            margin: 20px;
+            font-size: 30px;
+            font-style: italic;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
         .hero-icon {
             font-size: 50px;
@@ -77,24 +80,21 @@ body {
     }
 }
 
-.hero-button-container {
-    margin: 25px 0;
-    text-align: center;
-
-    .hero-button {
+.hero-button {
         background-color: $buttonColor;
         color: $whiteColor;
+        cursor: pointer;
         font-size: 23px;
+        font-weight: 700;
         padding: 10px 85px;
         text-decoration: none;
-    }
 }
 
 .review-head-container {
     font-size: 30px;
+    margin: 20px 0;
     text-align: center;
 }
-
 
 .review, 
 .task {
@@ -140,6 +140,7 @@ body {
             .task-head {
                 color: $headingColor;
                 font-size: 23px;
+                margin: 20px 0;
                 text-align: center;
             }
 
@@ -153,13 +154,11 @@ body {
         }
     }
 }
-
-.info-title, 
-.form-title, 
+ 
 .video-title {
     color: $titleColor;
     font-size: 30px;
-    margin: 0;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -168,10 +167,6 @@ body {
     color: $whiteColor;
     padding: 30px 0;
     text-align: center;
-
-    .video-title {
-        padding-bottom: 20px;
-    }
 }
 
 .info {
@@ -184,6 +179,7 @@ body {
         background-position: center;
         @extend %before;
     } 
+
     .info-desc {
         font-size: 19px;
         margin: auto;
@@ -242,14 +238,8 @@ body {
         }
 
         .last-button {
-            background-color: $buttonColor;
             border: 0px solid $whiteColor;
-            color: $whiteColor;
-            cursor: pointer;
-            display: block;
-            font-size: 20px;
             padding: 10px 0;
-            text-align: center;
             width: 100%;
         }
     }
@@ -262,7 +252,6 @@ body {
     overflow: auto;
     text-align:center;
 }
-
 
 @media only screen and (max-width: 1200px) {
 
@@ -402,9 +391,7 @@ body {
                 font-size: 40px;
             }
             .hero-tag {
-                .hero-title {
-                    font-size: 13px;
-                }
+                font-size: 13px;
             }
             .hero-motive {
                 font-size: 15px;
@@ -412,20 +399,15 @@ body {
         }
     }
     
-    .hero-button-container {
-        .hero-button {
-            font-size: 18px; 
-            padding: 5px 50px;
-        }
+    .hero-button {
+        font-size: 18px; 
+        padding: 5px 50px;
     }
-    
     
     .review-head-container {
-        font-size: 25px;
+        font-size: 20px;
     }
-
-    .info-title, 
-    .form-title, 
+ 
     .review-title, 
     .video-title {
         font-size: 18px;
