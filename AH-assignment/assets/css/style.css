@@ -61,11 +61,13 @@ body {
 
 .hero-button {
   background-color: #5eca37;
+  border: 0px solid #fff;
+  border-radius: 5px;
   color: #fff;
   cursor: pointer;
   font-size: 23px;
   font-weight: 700;
-  padding: 10px 85px;
+  padding: 10px 60px;
   text-decoration: none; }
 
 .review-head-container {
@@ -206,24 +208,24 @@ body {
     color: #fff; }
   .form .form-instruct {
     text-align: center; }
-  .form .form-data {
+  .form .form-container .form-data {
     margin: 0 auto;
     width: 250px; }
-    .form .form-data .form-label {
-      font-size: 13px;
-      text-align: left; }
-    .form .form-data .form-input,
-    .form .form-data .form-textarea {
+    .form .form-container .form-data .form-label {
+      font-size: 16px;
+      text-align: left;
+      margin-bottom: 3px; }
+    .form .form-container .form-data .form-input,
+    .form .form-container .form-data .form-textarea {
       box-sizing: border-box;
       border: 0px solid #fff;
       border-radius: 5px;
-      height: 25px;
-      margin-bottom: 10px;
-      width: 250px; }
-    .form .form-data .form-textarea {
-      height: 40px; }
-    .form .form-data .last-button {
-      border: 0px solid #fff;
+      height: 30px;
+      margin-bottom: 15px;
+      width: 100%; }
+    .form .form-container .form-data .form-textarea {
+      height: 50px; }
+    .form .form-container .form-data .last-button {
       padding: 10px 0;
       width: 100%; }
 
@@ -342,19 +344,17 @@ body {
   video {
     width: 50%; }
 
-  .form .form-data {
-    width: 50%; }
-    .form .form-data .form-input {
-      width: 100%;
+  .form-container .form-data {
+    width: 200px; }
+    .form-container .form-data .form-input {
       height: 20px; }
-    .form .form-data .form-textarea {
-      width: 100%;
+    .form-container .form-data .form-textarea {
       height: 30px; }
-    .form .form-data .last-button {
-      padding: 2px 0;
+    .form-container .form-data .last-button {
+      padding: 10px 0;
       font-size: 14px; }
-    .form .form-data .form-label {
-      font-size: 8px; }
+    .form-container .form-data .form-label {
+      font-size: 12px; }
 
   .footer {
     font-size: 10px; }
@@ -364,7 +364,7 @@ body {
   .hero .hero-inner .hero-icon {
     font-size: 40px; }
   .hero .hero-inner .hero-tag {
-    font-size: 13px; }
+    font-size: 25px; }
   .hero .hero-inner .hero-motive {
     font-size: 15px; }
 
