@@ -1,0 +1,419 @@
+@import "color";
+
+%before {
+    background-color: $heroBgcolor;
+    background-size: cover;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: .2;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+body {
+    margin: 0;
+}
+
+.top {
+    background-image: linear-gradient(to right, $gradientStartColor , $gradientMiddleColor, $gradientEndColor);
+    height:40px;
+}
+
+.header-logo {
+    padding: 30px 0;
+    background: url(../images/AH-logo.png) center no-repeat;
+    background-size: 200px 50px;
+    display: inline-block;
+    text-align: center;
+    width: 49%;
+}
+
+.header-number {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 49%;
+        .number-content {
+            color: $headerNumColor;
+            font-size: 20px;
+            padding: 20px 0;
+        }
+}
+
+.hero {
+    background-size: cover;
+    background-image: url(../images/AH-hero-image.png);
+    color: $whiteColor;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+
+    &:before {
+        @extend %before;
+    }
+
+    .hero-inner {
+        display: inline-block;
+
+        .hero-head {
+            font-size: 35px;
+            margin: 0;
+            margin: 15px 0;
+        }
+
+        .hero-tag {
+            font-size: 30px;
+            font-style: italic;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .hero-icon {
+            font-size: 50px;
+        }
+        .hero-motive {
+            font-size: 20px;
+            margin: 15px;
+        }
+    }
+}
+
+.hero-button {
+        background-color: $buttonColor;
+        border: 0px solid $whiteColor;
+        border-radius: 5px;
+        color: $whiteColor;
+        cursor: pointer;
+        font-size: 23px;
+        font-weight: 700;
+        padding: 10px 60px;
+        text-decoration: none;
+}
+
+.review-head-container {
+    font-size: 30px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.review, 
+.task {
+    color: $commonTextColor;
+    padding-bottom: 30px;
+    text-align: center;
+
+    .review-inner, 
+    .task-inner {
+        margin: 0 auto;
+        width: 900px;
+
+        .review-container, 
+        .task-container {
+            box-sizing: border-box;
+            display: inline-block;
+            margin-right: 20px;
+            margin-left: 20px;
+            vertical-align: top;
+
+            .review-image-container {
+                display: inline-block;
+                margin-right: 10px;
+                vertical-align: top;
+                width: 80px;
+
+                .review-image {
+                    border-radius: 50%;
+                    margin-top: 22px;
+                }
+            }
+
+            .review-desc {
+                display: inline-block;
+                width: 300px;
+
+                .review-writter {
+                    font-size: 18px;
+                    text-align: right;
+                }
+            }
+
+            .task-head {
+                color: $headingColor;
+                font-size: 23px;
+                margin: 20px 0;
+                text-align: center;
+            }
+
+            .task-desc {
+                font-size:18px;
+            }
+        }
+
+        .task-container {
+            width: 400px;
+        }
+    }
+}
+ 
+.video-title {
+    color: $titleColor;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.video-container {
+    background-color: $videoContainerColor;
+    color: $whiteColor;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.info {
+    position: relative;
+    z-index: 1;
+    padding: 30px 0;
+
+    &:before {
+        background-image: url(../images/network.jpg);
+        background-position: center;
+        @extend %before;
+    } 
+
+    .info-desc {
+        font-size: 19px;
+        margin: auto;
+        padding-bottom: 20px;
+        width: 700px;
+
+        .hyper-link {
+            color: $LinkColor;
+        }
+
+        .info-list {
+            list-style-position: outside;
+            padding-left: 20px;
+        }
+
+        .info-terms {
+            font-size:12.5px;
+        }
+    }
+}
+
+.form {
+    background-color: $videoContainerColor;
+    color: $whiteColor;
+    padding: 30px 0;
+
+    .form-title {
+        color: $whiteColor;
+    }
+
+    .form-instruct {
+        text-align: center;
+    }
+
+    .form-container {
+
+        .form-data {
+            margin: 0 auto;
+            width: 250px;    
+
+            .form-label {
+                font-size: 16px;
+                text-align: left;
+                margin-bottom : 3px;
+            }    
+
+            .form-input, 
+            .form-textarea {
+                box-sizing:border-box;
+                border: 0px solid $whiteColor;
+                border-radius: 5px;
+                height: 30px;
+                margin-bottom: 15px;
+                width: 100%;
+            }
+
+            .form-textarea {
+                height: 50px;
+            }
+
+            .last-button {
+                padding: 10px 0;
+                width: 100%;
+            }
+        }
+    }
+}
+    
+.footer {
+    background-color: $footerColor;
+    color: $footerContentColor;
+    opacity: .9;
+    overflow: auto;
+    text-align:center;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .hero {
+        background-position: center;
+    }
+
+    .review {
+        .review-inner {
+            width: 600px;
+        }
+
+        .review-container {
+
+            .review-desc {
+                display: inline-block;
+                width: 150px;
+            }
+        }
+    }
+
+    .task {
+        .task-inner {
+            width: 600px;
+            .task-container {
+                width: 250px;
+            }
+        }
+    }
+    
+    .info {
+        .info-desc {
+            width: 70%;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 768px) {
+    .header-logo {
+        padding: 20px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .header-number {
+        text-align: center;
+        vertical-align: top;
+        width: 100%;
+
+        .number-content {
+            padding: 10px 0;
+        }
+    }
+
+    .info {
+        .info-desc {
+            width: 50%;
+            font-size: 14px;
+
+            .info-terms {
+                font-size: 8px;
+            }
+        }
+    }
+
+    .task, 
+    .review {
+        .task-inner, 
+        .review-inner {
+            width: 50%;
+
+            .task-container, 
+            .review-container {
+                margin: 0;
+                width: 100%;
+
+                .review-image-container, 
+                .review-desc {
+                    width: 100%;
+
+                    .review-writter {
+                        font-size: 13px;
+                        text-align: center;
+                    }
+                }
+
+                .task-head {
+                    font-size: 18px;
+                }
+                
+                .task-desc {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    
+    video {
+        width: 50%;
+    }
+
+    .form-container {
+        
+        .form-data {
+            width: 200px;
+
+            .form-input {
+                height: 20px;
+            }
+
+            .form-textarea {
+                height: 30px;
+            }
+
+            .last-button {
+                padding: 10px 0;
+                font-size: 14px;
+            }
+            .form-label {
+                font-size: 12px; 
+            }
+        }
+    }
+
+    .footer{
+        font-size: 10px
+    }
+
+    .hero {
+        .hero-inner {
+            .hero-head {
+                font-size: 20px;
+            }
+            .hero-icon {
+                font-size: 40px;
+            }
+            .hero-tag {
+                font-size: 25px;
+            }
+            .hero-motive {
+                font-size: 15px;
+            }
+        }
+    }
+    
+    .hero-button {
+        font-size: 18px; 
+        padding: 5px 50px;
+    }
+    
+    .review-head-container {
+        font-size: 20px;
+    }
+ 
+    .review-title, 
+    .video-title {
+        font-size: 18px;
+    }
+}
