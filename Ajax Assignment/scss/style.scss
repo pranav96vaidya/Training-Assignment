@@ -1,0 +1,102 @@
+    $navbarBgColor: #ffffff;
+    $navbarBoxShadowColor: #fbfbfb;
+    
+    html,
+    body {
+        overflow-y: hidden;
+    }
+    
+    .navbar {
+        background-color: $navbarBgColor;
+        border: 0;
+        border-radius: 0;
+        box-shadow: 0 5px 8px $navbarBoxShadowColor;
+
+        .nav-container {
+
+            .nav-header {
+                padding-left: 60px;
+            }
+
+            .nav-logo {
+                width: 100px;
+            }
+        }
+
+        .navbar-form {
+
+            .input-group {
+                width: 80%;
+
+                .form-control {
+                    border-radius: 2px;
+                }
+
+                .input-group-btn {
+                    width: 50px;
+
+                    .btn-default {
+                        border-radius: 2px;
+                        width: 60px;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-container {
+        margin-top : 80px;
+
+        .video-container {
+            margin: 0;
+
+            .iframe-video {
+                width: 100%;
+                height: 450px;
+                border: 0;
+            }
+        }
+    }
+
+    .video-head {
+        margin: 20px 0;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .thumbnail-container {
+        height: 600px;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+
+        .click-load {
+            margin-bottom: 10px;
+
+            .img-container,
+            .data-container {
+                padding:0 5px 0 5px;
+
+                .thumbnail-desc {
+                    font-weight: 500;
+                    font-size: 15px;
+                    height: 62px;
+                    overflow: hidden;
+                }
+
+                .thumbnail-img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .thumbnail-container::scrollbar {
+        width: 10px;
+    }
+    
+    .thumbnail-container::thumb {
+        border-radius: 10px;
+        background-color: darkgrey;
+        outline: 1px solid slategrey;
+        
+    }
