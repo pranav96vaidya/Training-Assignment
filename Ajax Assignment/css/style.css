@@ -11,15 +11,17 @@ body {
     padding-left: 60px; }
   .navbar .nav-container .nav-logo {
     width: 100px; }
-  .navbar .navbar-form .input-group {
-    width: 80%; }
-    .navbar .navbar-form .input-group .form-control {
-      border-radius: 2px; }
-    .navbar .navbar-form .input-group .input-group-btn {
-      width: 50px; }
-      .navbar .navbar-form .input-group .input-group-btn .btn-default {
-        border-radius: 2px;
-        width: 60px; }
+  .navbar .navbar-form {
+    margin-left: 50px; }
+    .navbar .navbar-form .input-group {
+      width: 80%; }
+      .navbar .navbar-form .input-group .form-control {
+        border-radius: 2px; }
+      .navbar .navbar-form .input-group .input-group-btn {
+        width: 50px; }
+        .navbar .navbar-form .input-group .input-group-btn .btn-default {
+          border-radius: 2px;
+          width: 60px; }
 
 .main-container {
   margin-top: 80px; }

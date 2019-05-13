@@ -1,3 +1,4 @@
+var mykey = config.API_KEY;
 var searchString = "";
 var thumbData = "";
 var videoData = "";
@@ -52,7 +53,7 @@ function fetch(nextToken) {
     };
     http.open("GET", "https://www.googleapis.com/youtube/v3/search?pageToken=" 
         + nextToken + 
-    "&key=AIzaSyCugM-smKsa2rA5yG_CIvDAwcP05VrZrNs&part=snippet&q=" 
+    "&key=" + mykey + "&part=snippet&q=" 
     + searchString + 
     "&maxResults=20", true);
     http.send();
