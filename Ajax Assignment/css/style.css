@@ -1,41 +1,36 @@
-html,
-body {
-  overflow-y: hidden; }
-
 .navbar {
   background-color: #ffffff;
   border: 0;
   border-radius: 0;
   box-shadow: 0 5px 8px #fbfbfb; }
-  .navbar .nav-container .nav-header {
+  .navbar .nav-header {
     padding-left: 60px; }
-  .navbar .nav-container .nav-logo {
+  .navbar .nav-logo {
     width: 100px; }
-  .navbar .navbar-form {
-    margin-left: 50px; }
-    .navbar .navbar-form .input-group {
-      width: 80%; }
-      .navbar .navbar-form .input-group .form-control {
-        border-radius: 2px; }
-      .navbar .navbar-form .input-group .input-group-btn {
-        width: 50px; }
-        .navbar .navbar-form .input-group .input-group-btn .btn-default {
-          border-radius: 2px;
-          width: 60px; }
+  .navbar .input-group {
+    margin-left: 50px;
+    width: 80%; }
+    .navbar .input-group .form-control {
+      border-radius: 2px; }
+    .navbar .input-group .input-group-btn {
+      width: 50px; }
+      .navbar .input-group .input-group-btn .btn-default {
+        border-radius: 2px;
+        width: 60px; }
 
 .main-container {
   margin-top: 80px; }
   .main-container .video-container {
     margin: 0; }
     .main-container .video-container .iframe-video {
-      width: 100%;
+      border: 0;
       height: 450px;
-      border: 0; }
+      width: 100%; }
 
 .video-head {
-  margin: 20px 0;
   font-size: 16px;
-  font-weight: 500; }
+  font-weight: 500;
+  margin: 20px 0; }
 
 .thumbnail-container {
   height: 600px;

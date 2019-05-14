@@ -6,7 +6,7 @@ var nextToken = "";
 var counter = 0;
 var videoCount = 1;
 
-function script() {
+function loadScript() {
     window.onload = fetch(nextToken);
     function fetch(nextToken) {
         searchString = document.getElementById("query").value;
@@ -17,9 +17,9 @@ function script() {
             }
             var test = document.getElementsByClassName("click-load");
             for (var k = 0; k < test.length; k++) {
-                test[k].addEventListener('click', fun);
+                test[k].addEventListener('click', loadVideo);
             }
-            function fun() {
+            function loadVideo() {
                 var videoId = this.getAttribute('data-video-id');
                 var videoTitle = this.getAttribute("data-video-title");
                 var channelTitle = this.getAttribute("data-channel-title");
@@ -33,22 +33,12 @@ function script() {
                         "<p>" + videodesc + "</p>";
                     document.getElementsByClassName("video-container")[0].innerHTML = videoData;
                 }
-                else {
-                    videoData = "<iframe class='iframe-video' src='https://www.youtube.com/embed/" +
-                        channelId +
-                        "'></iframe>" +
-                        "<p class='video-head'>" + videoTitle + "</p>" +
-                        "<p class='video-channel'>" + channelTitle + "</p>" +
-                        "<p>" + videodesc + "</p>";
-                    document.getElementsByClassName("video-container")[0].innerHTML = videoData;
-                }
-                
             }
             function yHandler() {
                 if ((this.scrollTop + this.offsetHeight) >= this.scrollHeight) {
-                    counter = 1;
                     fetch(nextToken);
                 }
+                counter = 1;
             }
             document.getElementsByClassName("thumbnail-container")[0].onscroll = yHandler;
         };
@@ -60,46 +50,55 @@ function script() {
         http.send();
     }
     function myFunction(response) {
-        var ajaxResponse = response.responseText;
-        var jsonObject = JSON.parse(ajaxResponse);
-        nextToken = jsonObject.nextPageToken;
-        if (jsonObject.items.length == 0) {
+        var ajaxResponse = JSON.parse(response.responseText);
+        nextToken = ajaxResponse.nextPageToken;
+        if (ajaxResponse.items.length == 0) {
             alert("end of data");
             return;
         }
-        for (var i = 0; i < jsonObject.items.length; i++) {
-            var descString = jsonObject.items[i].snippet.description.replace(/'/g, '&#39').replace(/"/g, '&#34');
-            if (jsonObject.items[i].id == undefined) {
-                continue;
-            }
-            if (jsonObject.items[i].id.videoId == undefined) {
+        for (var i = 0; i < ajaxResponse.items.length; i++) {
+            if (ajaxResponse.items[i].id == undefined || ajaxResponse.items[i].id.videoId == undefined) {
                 continue;
             }
             else {
+                var safetext = function (text) {
+                    var table = {
+                        '<': 'lt',
+                        '>': 'gt',
+                        '"': 'quot',
+                        '\'': 'apos',
+                        '&': 'amp',
+                    };
+
+                    return text.toString().replace(/[<>"'\r\n&]/g, function (chr) {
+                        return '&' + table[chr] + ';';
+                    });
+                };
                 thumbData = thumbData + "<div class='row click-load'" +
-                    "data-video-id='" + jsonObject.items[i].id.videoId + "'" +
-                    "data-video-title='" + jsonObject.items[i].snippet.title + "'" +
-                    "data-video-desc='" + descString + "'" +
-                    "data-channel-title='" + jsonObject.items[i].snippet.channelTitle + "'>" +
+                    "data-video-id='" + ajaxResponse.items[i].id.videoId + "'" +
+                    "data-video-title='" + ajaxResponse.items[i].snippet.title + "'" +
+                    "data-video-desc='" + safetext(ajaxResponse.items[i].snippet.description) + "'" +
+                    "data-channel-title='" + ajaxResponse.items[i].snippet.channelTitle + "'>" +
                     "<div class='col-sm-5 img-container'>" +
-                    "<img class='thumbnail-img' src ='" + jsonObject.items[i].snippet.thumbnails.medium.url + "'>" +
+                    "<img class='thumbnail-img' src ='" + ajaxResponse.items[i].snippet.thumbnails.medium.url + "'>" +
                     "</div>" +
                     "<div class='col-sm-7 data-container'>" +
-                    "<p class='thumbnail-desc'>" + jsonObject.items[i].snippet.title +
+                    "<p class='thumbnail-desc'>" + ajaxResponse.items[i].snippet.title +
                     "<div>" +
-                    jsonObject.items[i].snippet.channelTitle +
+                    ajaxResponse.items[i].snippet.channelTitle +
                     "</div>" +
                     "</div>" +
                     "</div>";
                 if (counter == 0) {
                     videoData = "<iframe class='iframe-video' src='https://www.youtube.com/embed/" +
-                        jsonObject.items[0].id.videoId +
+                        ajaxResponse.items[0].id.videoId +
                         "'></iframe>" +
                         "<p class='video-head'>" +
-                        jsonObject.items[0].snippet.title +
+                        ajaxResponse.items[0].snippet.title +
                         "</p>" +
                         "<p class='video-desc'>" +
-                        jsonObject.items[0].snippet.channelTitle + jsonObject.items[0].snippet.description +
+                        ajaxResponse.items[0].snippet.channelTitle + 
+                        safetext(ajaxResponse.items[i].snippet.description) +
                         "</p>";
                     document.getElementsByClassName("video-container")[0].innerHTML = videoData;
                     counter = 1;

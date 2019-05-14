@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>AJAX example</title>
     <meta charset="utf-8">
@@ -12,15 +11,14 @@
     <script type='text/javascript' src='../../javaScript/config.js'></script>
     <script src="../../javaScript/script.js"></script>
 </head>
-
-<body onload="script()">
+<body onload="loadScript()">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="nav-container clearfix row">
             <div class="navbar-header nav-header col-sm-2">
                 <img class="nav-logo" src="../../img/youtube-icon.jpg">
             </div>
             <div class="nav navbar-nav col-sm-10">
-                <form class="navbar-form">
+                <form class="navbar-form" method="POST">
                     <div class="input-group">
                         <input id="query" type="text" class="form-control" placeholder="Search" name="input-query">
                         <div class="input-group-btn">
