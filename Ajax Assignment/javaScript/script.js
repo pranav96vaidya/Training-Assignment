@@ -6,8 +6,8 @@ var nextToken = "";
 var counter = 0;
 var videoCount = 1;
 
-function loadScript() {
-    window.onload = fetch(nextToken);
+window.onload = function() {
+    fetch(nextToken);
     function fetch(nextToken) {
         searchString = document.getElementById("query").value;
         var http = new XMLHttpRequest();
@@ -24,7 +24,7 @@ function loadScript() {
                 var videoTitle = this.getAttribute("data-video-title");
                 var channelTitle = this.getAttribute("data-channel-title");
                 var videodesc = this.getAttribute("data-video-desc");
-                if(videoId != null) {
+                if (videoId != null) {
                     videoData = "<iframe class='iframe-video' src='https://www.youtube.com/embed/" +
                         videoId +
                         "'></iframe>" +
@@ -42,11 +42,11 @@ function loadScript() {
             }
             document.getElementsByClassName("thumbnail-container")[0].onscroll = yHandler;
         };
-        http.open("GET", "https://www.googleapis.com/youtube/v3/search?pageToken=" 
-            + nextToken + 
-        "&key=" + mykey + "&part=snippet&q=" 
-        + searchString + 
-        "&maxResults=20", true);
+        http.open("GET", "https://www.googleapis.com/youtube/v3/search?pageToken="
+            + nextToken +
+            "&key=" + mykey + "&part=snippet&q="
+            + searchString +
+            "&maxResults=20", true);
         http.send();
     }
     function myFunction(response) {
@@ -97,7 +97,7 @@ function loadScript() {
                         ajaxResponse.items[0].snippet.title +
                         "</p>" +
                         "<p class='video-desc'>" +
-                        ajaxResponse.items[0].snippet.channelTitle + 
+                        ajaxResponse.items[0].snippet.channelTitle +
                         safetext(ajaxResponse.items[i].snippet.description) +
                         "</p>";
                     document.getElementsByClassName("video-container")[0].innerHTML = videoData;
@@ -106,19 +106,19 @@ function loadScript() {
             }
         }
         videoCount++;
-        document.getElementsByClassName("thumbnail-container")[0].innerHTML = thumbData; 
+        document.getElementsByClassName("thumbnail-container")[0].innerHTML = thumbData;
         searchString = "";
         return nextToken;
     }
     var searchText = document.getElementById("query");
     searchText.addEventListener("keydown", function (e) {
-        if (e.keyCode === 13) { 
+        if (e.keyCode === 13) {
             event.preventDefault();
             nextToken = "";
             thumbData = "";
             counter = 0;
             fetch(nextToken);
-            document.getElementsByClassName("thumbnail-container")[0].scrollTop = 0; 
+            document.getElementsByClassName("thumbnail-container")[0].scrollTop = 0;
         }
     });
     document.querySelectorAll("button")[0].onclick = clickFun;
@@ -127,6 +127,7 @@ function loadScript() {
         thumbData = "";
         counter = 0;
         fetch(nextToken);
-        document.getElementsByClassName("thumbnail-container")[0].scrollTop = 0; 
+        document.getElementsByClassName("thumbnail-container")[0].scrollTop = 0;
     }
 }
+    
