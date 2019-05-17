@@ -206,12 +206,12 @@ function LoadScript() {
                             j++;
                         }
                     }
-                    document.querySelectorAll('#date .date-content')[i - 1].setAttribute("style", "color: #ffffff; border-radius: 50%; background-color: #ff0000;");
-                    document.querySelectorAll('#date .date-content')[i - 1].setAttribute("data-date", i);
-                    document.querySelectorAll('#date .date-content')[i - 1].setAttribute("data-name", nameAppend + " " + bdays[months[month]][j].name);
-                    document.querySelectorAll('#date .date-content')[i - 1].setAttribute('data-toggle', 'modal');
-                    document.querySelectorAll('#date .date-content')[i - 1].setAttribute('data-target', '#open-modal');
                     var x = document.querySelectorAll('#date .date-content')[i - 1];
+                    x.setAttribute("style", "color: #ffffff; border-radius: 50%; background-color: #ff0000;");
+                    x.setAttribute("data-date", i);
+                    x.setAttribute("data-name", nameAppend + " " + bdays[months[month]][j].name);
+                    x.setAttribute('data-toggle', 'modal');
+                    x.setAttribute('data-target', '#open-modal');                    
                     x.onclick = function () {
                         document.querySelectorAll('.modal-title')[0].innerHTML = "Happy Birthday " + this.getAttribute('data-name');
                     }
