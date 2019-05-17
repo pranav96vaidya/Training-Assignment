@@ -4,6 +4,7 @@ $formBorderColor: #808080;
 $formBoxShadowColor: #D3D3D3;
 $inputBgColor: #f7f7f7;
 $errorTextColor: #990000;
+$tipColor: #008000;
 
 body {
     background-color: $bgColor;
@@ -25,6 +26,11 @@ body {
 
             .form-group {
                 width: 400px;
+
+                .tips {
+                    color: $tipColor;
+                    font-size: 14px;
+                }
             }
 
             .form-control {
@@ -35,6 +41,10 @@ body {
         .error {
             color: $errorTextColor;
             font-size: 14px;
+        }
+
+        .form-control.error {
+            border: 1px solid $errorTextColor;
         }
     }
 }

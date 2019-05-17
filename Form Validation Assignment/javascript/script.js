@@ -2,18 +2,20 @@ $(function () {
     $.validator.addMethod("passwordValidation", function (value, element) {
         return this.optional(element) || /[a-z]+[A-Z]+[0-9]+/.test(value);
     }, "Must have at least one lowercase letter, one upperCase letter and a number");
+    $.validator.addMethod("emailValidation", function (value, element) {
+        return this.optional(element) || /\S+@\S+\.([a-zA-Z]{2,4})+$/.test(value);
+    }, "Must have at least one lowercase letter, one upperCase letter and a number");
     $.validator.addMethod("alphaNumericValidation", function (value, element) {
         return this.optional(element) || /^[A-Za-z0-9]*$/.test(value);
     }, "Must have only aplhaNumeric value");
     $.validator.addMethod("numberValidation", function (value, element) {
-        return this.optional(element) || /^(\+\d{1,3}[- ]?)?\d{10}$/.test(value);
-    }, "Must have valid number format");
-    $.validator.addMethod("selectValidation", function (value, element, arg) {
+        return this.optional(element) || /^\d{10}$/.test(value);
+    }, "Must contain 10 digits number");
+    $.validator.addMethod("selectValidation", function (value, _element, arg) {
         return arg !== value;
     }, "Please select a choice");
 
     $(".form").validate({
-        debug: true,
         rules: {
             name: "required",
             username: {
@@ -21,11 +23,19 @@ $(function () {
                 alphaNumericValidation: true,
             },
             email: {
-                required: true,
-                email: true
+                emailValidation: true
             },
             mobNum: {
-                required: true,
+                required: function () {
+                    if ($('.email').val() == "") {
+                        return true;
+                    }
+                    else {
+                        console.log(element);
+                        element.removeClass(error);
+                        return flase;
+                    }
+                },
                 numberValidation: true,
             },
             password: {
@@ -42,27 +52,23 @@ $(function () {
         },
         errorPlacement: function (error, element) {
             if (element.attr("type") == "radio") {
-                console.log(element.parent().parent());
-                //element.parent().parent().insertAfter(error);
                 error.insertAfter(element.parent().parent());
-                // if ($('input[type=radio]')) {
-                //     console.log($('input[type=radio]'));
-                //     console.log(element);
-                //     //this.parentNode.parentNode.insertAfter(error);
-                //     //error.insertAfter(element.parent());
-                // }
             }
             else {
                 error.insertAfter(element);
             }
         },
         messages: {
-            name: "Please enter your firstname",
+            name: "Please enter your Name",
+            username: {
+                required: "Please enter Username",
+            },
             password: {
                 required: "Please provide a password",
                 minlength: "Your password must be at least 5 characters long"
             },
             email: "Please enter a valid email address",
+            mobNum: "Please enter mobile number",
             gender: "Please select your gender"
         },
         onfocusout: function (element) {
@@ -71,7 +77,8 @@ $(function () {
         onkeyup: function (element) {
             this.element(element);
         },
-        submitHandler: function (form) {
+        submitHandler: function () {
+            console.log("Submitted!");
             form.submit();
         }
     });
