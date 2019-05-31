@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script id="mustache-template-timeline" type="text/template">
+        <div class="btn-container">
+            <input id="post-que" type="button" class="btn btn-success" data-toggle="modal" data-target="#question-modal" value="Add a Question">
+        </div>
+        {{#questionData}}
+        <div class="row thumbnail-content clearfix">
+            <div class="col-sm-1 user-img-container">
+                <img class="user-img" src="assets/image/avatar-1.png">
+            </div>
+            <div class="col-sm-11 timeline-data-container">
+                <div class="timeline-content">
+                    <div class="row que-head-container">
+                        <div class="col-xs-6 que-head-data">
+                        <div class="que-title"><b>You have posted a question</b></div>
+                            <div class="que-title"> {{timeValue}}</div>
+                        </div>
+                        <div class="col-xs-6 option-icon-container">
+                            <button data-toggle="popover" class="btn fa fa-ellipsis-v option-icon" que-id="
+                            {{id}}"
+                            data-param1="Parameter1" data-trigger="focus"></button>
+                        </div>
+                    </div>
+                    <div class="que-desc">
+                        <div class="que-tag"><strong>Que:</strong> {{question}}</div>
+                        {{#codeExists}}
+                        <div class="que-tag"><code> {{code}}</code></div>
+                        {{/codeExists}}
+                    </div>
+                    {{#answers}}
+                    <div class="ans-container">
+                        <div class="ans-content"><strong>Ans:</strong> {{.}}</div>
+                    </div>
+                    {{/answers}}
+                    <div class="form-group answer-area">
+                        <div class="que-title">
+                            <input type="text" class="form-control ansInput" queId=" {{time}}" placeholder="type your answer here">
+                        </div>
+                    </div>
+                    <div class="form-group">Total Answers: {{ansLength}} </div>
+                </div>
+            </div>
+        </div>
+        {{/questionData}}
+    </script>
+</head>
+
+</html>

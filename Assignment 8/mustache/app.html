@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script id="mustache-template-app" type="text/template">
+        <div class="form-container">
+            <form class="form-horizontal register-form" autocomplete="off">
+                <div class="error-signup"></div>
+                <div class="form-group form-head">
+                    <span class="form-header">Register</span>
+                </div>
+                <div class="form-group">
+                    <label for="form-user-name" class="col-sm-3 control-label">Username</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" name="username" id="form-user-name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="form-email" class="col-sm-3 control-label">Email</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control email" name="email" id="form-email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="form-password" class="col-sm-3 control-label">Password</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" name="password" id="form-password">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="form-select" class="col-sm-3 control-label">Profile</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" name="profile" id="form-select">
+                            <option value="" disabled="disabled" selected>Pick a choice!</option>
+                            <option value="java">java</option>
+                            <option value="nodejs">nodejs</option>
+                            <option value="react-native">react-native</option>
+                            <option value="full-stack developer">full-stack developer</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group btn-data">
+                    <div class="btn-container">
+                        <input type="button" id="add-developer" value="Sign Up" class="btn btn-success">
+                    </div>
+                    <div class="btn-container">
+                        <input type="button" id="developer-login" value="Login" class="btn btn-success login">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </script>
+</head>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script id="mustache-template-about" type="text/template">
+        <div class="about-data-container">
+            <div class="row about-head">
+                <div class="col-xs-6 head-content">BASIC INFORMATION</div>
+                <div class="col-xs-6 head-icon"><div class="icon-container" data-toggle="modal" data-target="#edit-data-modal"><i class="fa fa-edit edit-icon"></div></i></div>
+            </div>
+            <div class="row about-data">
+                <div class="col-xs-4 about-title">
+                    <div>Gender</div>
+                </div>
+                <div class="col-xs-8 title-values">
+                    <div> {{#developerEntries}} {{gender}} {{/developerEntries}}</div>
+                </div>
+            </div>
+            <div class="row about-data">
+                <div class="col-xs-4 about-title">
+                    <div>Birth Date</div>
+                </div>
+                <div class="col-xs-8 title-values">
+                    <div> {{#developerEntries}} {{dob}} {{/developerEntries}}</div>
+                </div>
+            </div>
+            <div class="row about-data">
+                <div class="col-xs-4 about-title">
+                    <div>Maritial Status</div>
+                </div>
+                <div class="col-xs-8 title-values">
+                    <div> {{#developerEntries}} {{maritialStatus}} {{/developerEntries}}</div>
+                </div>
+            </div>
+            <div class="row about-data">
+                <div class="col-xs-4 about-title">
+                    <div>Location</div>
+                </div>
+                <div class="col-xs-8 title-values">
+                    <div> {{#developerEntries}} {{location}} {{/developerEntries}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="about-data-container">
+                <div class="row about-head">
+                    <div class="col-xs-6 head-content">WORK</div> 
+                    <div class="col-xs-6 head-icon"><div class="icon-work-container" data-toggle="modal" data-target="#edit-work-modal"><i class="fa fa-edit edit-icon"></div></i></div>
+                </div>
+                <div class="row about-data">
+                    <div class="col-xs-4 about-title">
+                        <div>Designation</div>
+                    </div>
+                    <div class="col-xs-8 title-values">
+                        <div> {{#developerEntries}} {{occupation}} {{/developerEntries}} </div>
+                    </div>
+                </div>
+                <div class="row about-data">
+                    <div class="col-xs-4 about-title">
+                        <div>Skills</div>
+                    </div>
+                    <div class="col-xs-8 title-values">
+                        <div> {{#developerEntries}} {{skills}} {{/developerEntries}} </div>
+                    </div>
+                </div>
+            </div>
+    </script>
+</head>
+</html>
