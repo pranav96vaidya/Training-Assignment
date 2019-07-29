@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script id="mustache-template-question" type="text/template">
+    {{#developerEntries}}
+    <div class="col-sm-6 thumbnail-content clearfix">
+        <div class="question-data-container">
+            <div class="row que-desc">
+                <div class="col-xs-9 question-content">  {{question}}  
+                </div>
+                <div class="col-xs-3 option-icon-container">
+                    <button data-toggle="popover" class="btn fa fa-ellipsis-v option-icon" que-id="{{id}}"
+                     data-param1="Parameter1" data-trigger="focus"></button>
+                    </div>
+                </div>
+        </div>
+        </div>
+        {{/developerEntries}}
+    </script>
+</head>
+</html>

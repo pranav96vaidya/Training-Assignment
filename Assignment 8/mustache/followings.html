@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script id="mustache-template-followings" type="text/template">
+        {{#followValue}}
+        <div class="col-sm-6 thumbnail-content clearfix">
+            <div class="following-data-container">
+                <div class="row following-data-row">
+                    <div class="col-sm-4 following-img-container"><img src="assets/image/profile.jpg" class="following-img"></div>
+                    <div class="col-sm-8">
+                        <div class="row follow-btn-container">
+                            <div class="col-sm-6">
+                                <div class="follow-content"> {{name}} </div>
+                                <div class="follow-content">  {{profile}} </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="button" name ="{{name}}"
+                                profile="{{profile}}"
+                                class="btn btn-success follow-btn" value="{{val}}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/followValue}}
+    </script>
+</head>
+</html>
