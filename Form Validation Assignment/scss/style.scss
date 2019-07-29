@@ -1,0 +1,50 @@
+$bgColor: #E6E6E6;
+$formBgColor: #ffffff;
+$formBorderColor: #808080;
+$formBoxShadowColor: #D3D3D3;
+$inputBgColor: #f7f7f7;
+$errorTextColor: #990000;
+$tipColor: #008000;
+
+body {
+    background-color: $bgColor;
+    margin: 0;
+    height: 600px;
+
+    .form {
+        background-color: $formBgColor;
+        border: 1px solid $formBorderColor;
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px $formBoxShadowColor;
+        padding: 30px 10px;
+        margin: 50px auto;
+        width: 600px;
+
+        .form-content {
+            margin-left: 30px;
+            width: 400px;
+
+            .form-group {
+                width: 400px;
+
+                .tips {
+                    color: $tipColor;
+                    font-size: 14px;
+                }
+            }
+
+            .form-control {
+                background-color: $inputBgColor;
+            }
+        }
+
+        .error {
+            color: $errorTextColor;
+            font-size: 14px;
+        }
+
+        .form-control.error {
+            border: 1px solid $errorTextColor;
+        }
+    }
+}
