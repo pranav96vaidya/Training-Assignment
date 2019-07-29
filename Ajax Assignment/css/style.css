@@ -1,0 +1,62 @@
+.navbar {
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 5px 8px #fbfbfb; }
+  .navbar .nav-header {
+    padding-left: 60px; }
+  .navbar .nav-logo {
+    width: 100px; }
+  .navbar .input-group {
+    margin-left: 50px;
+    width: 80%; }
+    .navbar .input-group .form-control {
+      border-radius: 2px; }
+    .navbar .input-group .input-group-btn {
+      width: 50px; }
+      .navbar .input-group .input-group-btn .btn-default {
+        border-radius: 2px;
+        width: 60px; }
+
+.main-container {
+  margin-top: 80px; }
+  .main-container .video-container {
+    margin: 0; }
+    .main-container .video-container .iframe-video {
+      border: 0;
+      height: 450px;
+      width: 100%; }
+
+.video-head {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 20px 0; }
+
+.thumbnail-container {
+  height: 600px;
+  overflow-y: scroll;
+  scroll-behavior: smooth; }
+  .thumbnail-container .click-load {
+    margin-bottom: 10px; }
+    .thumbnail-container .click-load .img-container,
+    .thumbnail-container .click-load .data-container {
+      padding: 0 5px 0 5px; }
+      .thumbnail-container .click-load .img-container .thumbnail-desc,
+      .thumbnail-container .click-load .data-container .thumbnail-desc {
+        font-weight: 500;
+        font-size: 15px;
+        height: 62px;
+        overflow: hidden; }
+      .thumbnail-container .click-load .img-container .thumbnail-img,
+      .thumbnail-container .click-load .data-container .thumbnail-img {
+        width: 100%; }
+
+.thumbnail-container::scrollbar {
+  width: 10px; }
+
+.thumbnail-container::thumb {
+  border-radius: 10px;
+  background-color: darkgrey;
+  outline: 1px solid slategrey; }
+
+/*# sourceMappingURL=style.css.map */
