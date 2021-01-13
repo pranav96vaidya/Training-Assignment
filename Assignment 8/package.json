@@ -11,7 +11,7 @@
   "dependencies": {
     "bootstrap": "^3.4.0",
     "jquery": "^3.4.1",
-    "jquery-validation": "^1.19.0",
+    "jquery-validation": "^1.19.3",
     "lite-server": "^2.5.3"
   }
 }
